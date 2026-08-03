@@ -1,0 +1,6 @@
+submission/outputs.txt
+submission/results.txt
+__pycache__/
+.DS_Store
+*.swp
+Thumbs.db
