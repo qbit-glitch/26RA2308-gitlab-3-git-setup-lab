@@ -1,0 +1,125 @@
+Name   :
+Reg No :
+
+##############################################################################
+#  GIT SETUP LAB  -  SUBMISSION FILE
+#
+#  1. Copy this file:    cp submission/outputs.template.txt submission/outputs.txt
+#  2. Do the tasks in ASSIGNMENT.md, in order.
+#  3. After each command, paste what the terminal printed UNDER the matching
+#     "--- N.M" line, replacing the line "(paste output here)".
+#  4. Do not edit or delete the "=== TASK" and "--- N.M" lines.
+#  5. Check your work at any time, from any folder:
+#       python3 ~/git-setup-lab/tests/grade.py
+##############################################################################
+
+
+=== TASK 1 : Is Git here  (8 marks) ===
+
+--- 1.1  git --version ---
+(paste output here)
+
+--- 1.2  which git ---
+(paste output here)
+
+# Q1 (type the answer on the ANSWER-1 line below): is the Git version of step 1.1 at least 2.28? (yes or no)
+ANSWER-1 :
+
+
+=== TASK 2 : Who are you  (14 marks) ===
+
+--- 2.1  git config --global user.name "Your Full Name" && git config --global user.name ---
+(paste output here)
+
+--- 2.2  git config --global user.email "your-email@your-college.edu" && git config --global user.email ---
+(paste output here)
+
+
+=== TASK 3 : Defaults  (12 marks) ===
+
+--- 3.1  git config --global core.editor nano && git config --global core.editor ---
+(paste output here)
+
+--- 3.2  git config --global init.defaultBranch main && git config --global init.defaultBranch ---
+(paste output here)
+
+--- 3.3  git config --global pull.rebase false && git config --list | grep pull ---
+(paste output here)
+
+
+=== TASK 4 : Where do the values come from  (16 marks) ===
+
+--- 4.1  git config --list ---
+(paste output here)
+
+# Q2 (type the answer on the ANSWER-2 line below): how many lines did `git config --list` print in 4.1? (count each setting once, even when it wraps on your screen)
+ANSWER-2 :
+
+--- 4.2  git config --list --show-origin ---
+(paste output here)
+
+# Q3 (type the answer on the ANSWER-3 line below): the file that user.name comes from in the 4.2 listing (its whole path)
+ANSWER-3 :
+
+--- 4.3  git config --global user.name ---
+(paste output here)
+
+--- 4.4  git config user.email ---
+(paste output here)
+
+
+=== TASK 5 : Two emails, one folder  (14 marks) ===
+
+--- 5.1  git config --local user.email "lab-only@kestrel.example" && git config user.email ---
+(paste output here)
+
+# Q4 (type the answer on the ANSWER-4 line below): in the lab folder, which email wins in 5.1: the local one or the global one? (local or global)
+ANSWER-4 :
+
+--- 5.2  git config --global user.email ---
+(paste output here)
+
+--- 5.3  git config --list --show-origin | grep user.email ---
+(paste output here)
+
+--- 5.4  git config --local --unset user.email && git config user.email ---
+(paste output here)
+
+
+=== TASK 6 : Shortcuts  (16 marks) ===
+
+--- 6.1  git config --global alias.st status && git config --global alias.lg "log --oneline --graph --decorate --all" && git config --global --get-regexp alias ---
+(paste output here)
+
+--- 6.2  git config --global --edit   then   git config --global --get-regexp alias ---
+(paste output here)
+
+--- 6.3  git st ---
+(paste output here)
+
+--- 6.4  git lg ---
+(paste output here)
+
+# Q5 (type the answer on the ANSWER-5 line below): the subject of the newest commit, the top line of the 6.4 listing
+ANSWER-5 :
+
+
+=== TASK 7 : SSH key  (20 marks) ===
+
+--- 7.1  mkdir -p -m 700 ~/.ssh && ssh-keygen -t ed25519 -C "your-email@your-college.edu" -f ~/.ssh/id_ed25519 -N "" ---
+(paste output here)
+
+--- 7.2  cat ~/.ssh/id_ed25519.pub ---
+(paste output here)
+
+--- 7.3  ssh-keygen -lf ~/.ssh/id_ed25519.pub ---
+(paste output here)
+
+# Q6 (type the answer on the ANSWER-6 line below): the first 8 characters after SHA256: in the fingerprint of 7.3
+ANSWER-6 :
+
+--- 7.4  ssh -T git@github.com ---
+(paste output here)
+
+# Q7 (type the answer on the ANSWER-7 line below): your GitHub user name, as GitHub greets you in 7.4
+ANSWER-7 :
